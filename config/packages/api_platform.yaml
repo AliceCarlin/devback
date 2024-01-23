@@ -1,0 +1,21 @@
+api_platform:
+    title: Hello API Platform
+    version: 1.4.3
+    show_webby: false
+    # Good defaults for REST APIs
+    defaults:
+        stateless: true
+        cache_headers:
+            vary: ['Content-Type', 'Authorization', 'Origin']
+        extra_properties:
+            standard_put: true
+        pagination_client_items_per_page: true
+        collection:
+            pagination:
+                enabled: true
+                page_parameter_name: 'page'
+                pagination_items_per_page: 'itemsPerPage'
+        
+
+    graphql:
+        enabled: true
