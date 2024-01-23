@@ -85,7 +85,6 @@ public function load(ObjectManager $manager): void
     /* foreach ($categories as $category) {
         $numMovies = rand(2, 5);
 
-        // Randomly select movies for the category
         $randomMovies = array_rand($movies, min($numMovies, count($movies)));
         if (!is_array($randomMovies)) {
             $randomMovies = [$randomMovies];
@@ -94,7 +93,6 @@ public function load(ObjectManager $manager): void
         foreach ($randomMovies as $index) {
             $movie = $movies[$index];
 
-            // Associate the movie with the category
             $category->addMovie($movie);
             $movie->addCategory($category);
 
